@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam S - Resume | Rathinam Technical Campus</title>
+  <meta name="description" content="Resume of Sam S, studying B.E. Computer Science and Engineering (AI &amp; ML) at Rathinam Technical Campus">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 1050px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .photo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .photo-frame {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background-color: #334155;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-title-block {
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 16px;
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .profile-role {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .profile-college {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 2px;
+    }
+
+    .sidebar-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+      word-break: break-all;
+    }
+
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .skills-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .skill-category-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 3px;
+    }
+
+    .skill-tags {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    .education-item-side {
+      margin-bottom: 12px;
+    }
+
+    .education-item-side:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .edu-inst {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 2px;
+    }
+
+    .edu-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 2px;
+    }
+
+    /* Main Body */
+    .main-content {
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      background: #ffffff;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid var(--primary);
+    }
+
+    .summary-text {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .project-item {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .project-tech {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.55;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .experience-item {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .exp-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .exp-org {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .card-small {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      background: #f8fafc;
+      font-size: 12px;
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .card-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Print rules */
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+
+      .resume-wrapper {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        grid-template-columns: 260px 1fr !important;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-wrapper {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      
+      <div class="photo-container">
+        <div class="photo-frame">
+          <img src="/sam_photo.jpg" alt="Sam S" />
+        </div>
+      </div>
+      
+
+      <div class="profile-title-block">
+        <h1 class="profile-name">Sam S</h1>
+        <div class="profile-role">B.E. Computer Science and Engineering (AI &amp; ML)</div>
+        <div class="profile-college">Rathinam Technical Campus</div>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">Contact</div>
+        <div class="contact-list">
+          <div class="contact-item">📧 <a href="mailto:samsyam2007@gmail.com">samsyam2007@gmail.com</a></div>
+          <div class="contact-item">📱 <span>+91 94883 12450</span></div>
+          <div class="contact-item">📍 <span>Coimbatore, Tamil Nadu, India</span></div>
+          <div class="contact-item">💼 <a href="https://linkedin.com/in/sam-s-aiml" target="_blank">linkedin.com/in/sam-s-aiml</a></div>
+          <div class="contact-item">💻 <a href="https://github.com/sam-cse-aiml" target="_blank">github.com/sam-cse-aiml</a></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">Technical Skills</div>
+        <div class="skills-block">
+          
+            <div>
+              <div class="skill-category-title">Artificial Intelligence &amp; ML</div>
+              <div class="skill-tags">PyTorch · TensorFlow · Scikit-Learn · OpenCV · Deep Neural Networks (CNN/RNN) · NLP &amp; Transformers · Pandas &amp; NumPy · Model Evaluation</div>
+            </div>
+          
+            <div>
+              <div class="skill-category-title">Programming Languages</div>
+              <div class="skill-tags">Python · C++ · C · Java · SQL · JavaScript</div>
+            </div>
+          
+            <div>
+              <div class="skill-category-title">Web &amp; Backend Technologies</div>
+              <div class="skill-tags">FastAPI · Flask · React.js · HTML5 &amp; CSS3 · Tailwind CSS · RESTful APIs</div>
+            </div>
+          
+            <div>
+              <div class="skill-category-title">Developer Tools &amp; Platforms</div>
+              <div class="skill-tags">Git &amp; GitHub · Linux / Shell · Docker (Basics) · Jupyter Notebook · Google Colab · VS Code · Postman</div>
+            </div>
+          
+            <div>
+              <div class="skill-category-title">Core Computer Science</div>
+              <div class="skill-tags">Data Structures &amp; Algorithms · Object-Oriented Programming (OOP) · DBMS &amp; SQL Queries · Operating Systems · Computer Networks</div>
+            </div>
+          
+        </div>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">Education</div>
+        
+          <div class="education-item-side">
+            <div class="edu-degree">Bachelor of Engineering (B.E.)</div>
+            <div class="edu-inst">Rathinam Technical Campus</div>
+            <div class="edu-meta">
+              <span>2024 – 2028</span>
+              <span>CGPA: 8.8 / 10.0 (Current)</span>
+            </div>
+          </div>
+        
+          <div class="education-item-side">
+            <div class="edu-degree">Higher Secondary Examination</div>
+            <div class="edu-inst">Higher Secondary Certificate (Class XII - HSC)</div>
+            <div class="edu-meta">
+              <span>2022 – 2024</span>
+              <span>92.6%</span>
+            </div>
+          </div>
+        
+          <div class="education-item-side">
+            <div class="edu-degree">Secondary School Examination</div>
+            <div class="edu-inst">Secondary School Leaving Certificate (Class X - SSLC)</div>
+            <div class="edu-meta">
+              <span>2021 – 2022</span>
+              <span>94.2%</span>
+            </div>
+          </div>
+        
+      </div>
+
+      
+      <div>
+        <div class="sidebar-section-title">Languages</div>
+        <div style="font-size: 11.5px; color: rgba(255,255,255,0.85);">English (Professional Working) · Tamil (Native / Fluent)</div>
+      </div>
+      
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <section>
+        <h2 class="section-title">Career Objective & Summary</h2>
+        <p class="summary-text">Passionate and forward-thinking engineering student pursuing B.E. Computer Science &amp; Engineering (AIML) at Rathinam Technical Campus. Strong grounding in Python programming, machine learning algorithms, deep neural architectures, and data structures. Eager to solve real-world problems using intelligent systems, computer vision, and modern full-stack technologies. Actively seeking AI/ML engineering internships and software development opportunities to deliver high-impact technical solutions.</p>
+      </section>
+      
+
+      <section>
+        <h2 class="section-title">AI & Machine Learning Projects</h2>
+        
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-title">Real-Time Traffic &amp; Safety Object Detection System</span>
+              <span style="font-size: 11px; color: #64748b;">3 Months</span>
+            </div>
+            <div class="project-tech">Tech Stack: Python · YOLOv8 · OpenCV · PyTorch · Flask</div>
+            <ul class="bullet-list">
+              <li>Engineered a real-time computer vision pipeline utilizing YOLOv8 and OpenCV to detect and categorize vehicles, pedestrians, and safety violations from live surveillance camera feeds at 42 FPS.</li><li>Trained and fine-tuned custom bounding box models with an mAP@0.5 score of 91.4% on edge hardware.</li><li>Integrated an automated alert dashboard using Flask and WebSocket streaming for instant incident notifications.</li>
+            </ul>
+          </div>
+        
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-title">Intelligent Medical Diagnostics Support Tool</span>
+              <span style="font-size: 11px; color: #64748b;">2 Months</span>
+            </div>
+            <div class="project-tech">Tech Stack: PyTorch · ResNet-50 · Transfer Learning · FastAPI · React</div>
+            <ul class="bullet-list">
+              <li>Developed a deep learning diagnostic classification model using transfer learning on ResNet-50 to analyze chest X-ray scans with 94.2% validation accuracy.</li><li>Implemented Grad-CAM saliency heatmaps to provide explainable AI visual interpretations for medical practitioners.</li><li>Constructed a lightweight asynchronous FastAPI backend paired with a clean React interface for medical staff file uploads.</li>
+            </ul>
+          </div>
+        
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-title">Context-Aware Student FAQ Assistant using RAG</span>
+              <span style="font-size: 11px; color: #64748b;">1.5 Months</span>
+            </div>
+            <div class="project-tech">Tech Stack: Python · LangChain · ChromaDB · Hugging Face · Streamlit</div>
+            <ul class="bullet-list">
+              <li>Designed a campus document query chatbot for Rathinam Technical Campus syllabus and regulations using vector embeddings in ChromaDB.</li><li>Leveraged open-source transformer embeddings to achieve sub-second document semantic retrieval and zero hallucination answers.</li><li>Deployed interactive demo on Streamlit for peer students to quickly search academic schedules, syllabus credits, and campus circulars.</li>
+            </ul>
+          </div>
+        
+      </section>
+
+      
+      <section>
+        <h2 class="section-title">Experience & Leadership</h2>
+        
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="exp-role">AI &amp; ML Student Researcher</span>
+              <span style="font-size: 11px; color: #64748b;">Aug 2024 – Present</span>
+            </div>
+            <div class="exp-org">Rathinam Innovation &amp; Incubation Cell (RIIC) · Coimbatore, Tamil Nadu</div>
+            <ul class="bullet-list">
+              <li>Collaborate in a multidisciplinary student research team investigating computer vision edge applications for smart campus security.</li><li>Assist in curating, annotating, and benchmarking computer vision datasets exceeding 5,000 labeled images.</li><li>Present weekly technical literature reviews on state-of-the-art vision-language models and reinforcement learning developments.</li>
+            </ul>
+          </div>
+        
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="exp-role">Technical Committee Member</span>
+              <span style="font-size: 11px; color: #64748b;">Sep 2024 – Present</span>
+            </div>
+            <div class="exp-org">RTC AIML Student Association · Coimbatore, Tamil Nadu</div>
+            <ul class="bullet-list">
+              <li>Co-organized Python coding workshops and machine learning hands-on bootcamps for 120+ first-year engineering students.</li><li>Coordinated campus technical hackathons, managing problem statement documentation and automated code evaluation rubrics.</li>
+            </ul>
+          </div>
+        
+      </section>
+      
+
+      <section>
+        <h2 class="section-title">Certifications & Honors</h2>
+        <div class="grid-2">
+          
+            <div class="card-small">
+              <div class="card-title">Machine Learning Specialization</div>
+              <div class="card-meta">DeepLearning.AI &amp; Stanford Online (Coursera) (2024)</div>
+            </div>
+          
+            <div class="card-small">
+              <div class="card-title">Programming, Data Structures And Algorithms Using Python</div>
+              <div class="card-meta">NPTEL / IIT Madras (Elite Certification) (2024)</div>
+            </div>
+          
+            <div class="card-small">
+              <div class="card-title">Deep Learning with PyTorch: Zero to GANs</div>
+              <div class="card-meta">FreeCodeCamp &amp; Jovian (2024)</div>
+            </div>
+          
+          
+            <div class="card-small">
+              <div class="card-title">🏆 RTC Annual Hackathon - 1st Runner-Up</div>
+              <div class="card-meta">Secured 2nd position among 45 teams for developing an AI-assisted automated attendance and crowd density monitoring solution. · 2024</div>
+            </div>
+          
+            <div class="card-small">
+              <div class="card-title">🏆 Competitive Programming Milestone</div>
+              <div class="card-meta">Solved 250+ algorithm problems across LeetCode, CodeChef, and HackerRank in Python and C++. · 2024 - 2025</div>
+            </div>
+          
+            <div class="card-small">
+              <div class="card-title">🏆 Academic Excellence Distinction</div>
+              <div class="card-meta">Recognized among top rank holders in the Department of Computer Science &amp; Engineering (AIML) at Rathinam Technical Campus. · 2024</div>
+            </div>
+          
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

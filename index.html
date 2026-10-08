@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sam - Resume</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9ecef;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* MAIN RESUME */
+
+        .resume {
+            width: 850px;
+            max-width: 95%;
+            margin: 30px auto;
+            background: white;
+            padding: 45px 55px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* HEADER */
+
+        .header {
+            border-bottom: 2px solid #222;
+            padding-bottom: 22px;
+            margin-bottom: 25px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header h2 {
+            font-size: 17px;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 125px;
+            height: 125px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid #222;
+
+            margin-left: 30px;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            font-size: 13px;
+            color: #444;
+        }
+
+        .contact a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* SECTIONS */
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+
+            border-bottom: 2px solid #222;
+
+            padding-bottom: 5px;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* CAREER OBJECTIVE */
+
+        .objective {
+            font-size: 14px;
+            text-align: justify;
+        }
+
+
+        /* EDUCATION */
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-item h3 {
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .education-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px 30px;
+        }
+
+        .skill-category {
+            font-size: 14px;
+        }
+
+        .skill-category strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: #222;
+        }
+
+
+        /* PROJECTS */
+
+        .project {
+            margin-bottom: 18px;
+        }
+
+        .project h3 {
+            font-size: 16px;
+
+            margin-bottom: 5px;
+        }
+
+        .project p {
+            font-size: 14px;
+
+            margin-bottom: 5px;
+        }
+
+        .project ul {
+            padding-left: 20px;
+        }
+
+        .project li {
+            font-size: 14px;
+
+            margin-bottom: 4px;
+        }
+
+
+        /* INTERESTS */
+
+        .interest-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .interest {
+            background: #eeeeee;
+
+            padding: 5px 12px;
+
+            border-radius: 4px;
+
+            font-size: 13px;
+        }
+
+
+        /* CERTIFICATIONS */
+
+        .simple-list {
+            padding-left: 20px;
+
+            font-size: 14px;
+        }
+
+        .simple-list li {
+            margin-bottom: 5px;
+        }
+
+
+        /* BUTTON */
+
+        .buttons {
+            text-align: center;
+
+            margin: 20px auto 40px;
+        }
+
+        button {
+            padding: 11px 20px;
+
+            border: none;
+
+            background: #222;
+
+            color: white;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .resume {
+                width: 95%;
+
+                padding: 30px 25px;
+            }
+
+            .header-content {
+                flex-direction: column-reverse;
+
+                text-align: center;
+            }
+
+            .profile-photo {
+                margin: 0 0 15px 0;
+
+                width: 110px;
+                height: 110px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .header h2 {
+                font-size: 15px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* PRINT / PDF */
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+
+                max-width: 100%;
+
+                margin: 0;
+
+                padding: 30px 45px;
+
+                box-shadow: none;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- RESUME -->
+    <!-- ========================= -->
+
+    <div class="resume">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+
+                <div class="header-text">
+
+                    <h1>Sam</h1>
+
+                    <h2>
+                        B.E. Computer Science & Engineering
+                        (Artificial Intelligence & Machine Learning)
+                    </h2>
+
+
+                    <div class="contact">
+
+                        📞 +91 XXXXX XXXXX
+
+                        &nbsp; | &nbsp;
+
+                        ✉️ your.email@gmail.com
+
+                        <br>
+
+                        📍 Chennai, Tamil Nadu
+
+                        <br>
+
+                        <a href="#" target="_blank">
+                            LinkedIn
+                        </a>
+
+                        &nbsp; | &nbsp;
+
+                        <a href="#" target="_blank">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- YOUR PHOTO -->
+
+                <img
+                    src="photo.jpg"
+                    alt="Sam Profile Photo"
+                    class="profile-photo"
+                >
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CAREER OBJECTIVE -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Career Objective
+            </h2>
+
+
+            <p class="objective">
+
+                Motivated and enthusiastic B.E. Computer Science and
+                Engineering student specializing in Artificial Intelligence
+                and Machine Learning. Interested in software development,
+                web development, and practical AI applications. Seeking
+                opportunities to apply technical knowledge, develop
+                real-world solutions, and continuously learn new technologies.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- EDUCATION -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+
+            <div class="education-item">
+
+                <h3>
+                    B.E. Computer Science and Engineering
+                    (Artificial Intelligence & Machine Learning)
+                </h3>
+
+                <p>
+                    <strong>College Name</strong>
+                </p>
+
+                <p>
+                    Currently Pursuing
+                    | Expected Graduation: 20XX
+                </p>
+
+                <p>
+                    CGPA: X.XX / 10
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    Higher Secondary Education (12th)
+                </h3>
+
+                <p>
+                    School Name
+                    | Percentage: XX%
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    Secondary Education (10th)
+                </h3>
+
+                <p>
+                    School Name
+                    | Percentage: XX%
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
+
+            <div class="skills">
+
+
+                <div class="skill-category">
+
+                    <strong>
+                        Programming Languages
+                    </strong>
+
+                    Python, C, C++, Java
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <strong>
+                        Web Technologies
+                    </strong>
+
+                    HTML, CSS, JavaScript
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <strong>
+                        Database
+                    </strong>
+
+                    MySQL, Firebase
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <strong>
+                        AI / Machine Learning
+                    </strong>
+
+                    Artificial Intelligence,
+                    Machine Learning
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <strong>
+                        Tools
+                    </strong>
+
+                    Git, GitHub, VS Code
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <h3>
+                    HabitX – Habit Tracking Web Application
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Technologies:
+                    </strong>
+
+                    HTML, CSS, JavaScript
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Developed a web-based habit tracking application
+                        for managing and monitoring daily habits.
+                    </li>
+
+                    <li>
+                        Implemented daily habit tracking and
+                        progress monitoring features.
+                    </li>
+
+                    <li>
+                        Added streak tracking and consistency
+                        visualization.
+                    </li>
+
+                    <li>
+                        Explored database integration for storing
+                        user and habit-related data.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <h3>
+                    Project Name
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Technologies:
+                    </strong>
+
+                    Add technologies here
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Add a description of your project.
+                    </li>
+
+                    <li>
+                        Mention the main features.
+                    </li>
+
+                    <li>
+                        Mention your contribution.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TECHNICAL INTERESTS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Technical Interests
+            </h2>
+
+
+            <div class="interest-list">
+
+
+                <span class="interest">
+                    Artificial Intelligence
+                </span>
+
+
+                <span class="interest">
+                    Machine Learning
+                </span>
+
+
+                <span class="interest">
+                    Software Development
+                </span>
+
+
+                <span class="interest">
+                    Web Development
+                </span>
+
+
+                <span class="interest">
+                    Practical AI Applications
+                </span>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CERTIFICATIONS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Certifications
+            </h2>
+
+
+            <ul class="simple-list">
+
+                <li>
+                    Certification Name – Organization
+                </li>
+
+                <li>
+                    Certification Name – Organization
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Achievements
+            </h2>
+
+
+            <ul class="simple-list">
+
+                <li>
+                    Add your achievement here.
+                </li>
+
+                <li>
+                    Add another achievement here.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- LANGUAGES -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Languages
+            </h2>
+
+
+            <p style="font-size: 14px;">
+
+                English | Tamil
+
+            </p>
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- PRINT BUTTON -->
+
+    <div class="buttons">
+
+        <button onclick="window.print()">
+
+            🖨️ Download / Save as PDF
+
+        </button>
+
+    </div>
+
+
+
+</body>
+
+</html>
